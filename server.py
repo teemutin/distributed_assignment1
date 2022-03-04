@@ -14,7 +14,7 @@ clients = []
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 server.listen()
-print("Server is listening")
+print("Server is running")
 
 # Sending Messages To All Connected Clients
 def broadcast(message):
