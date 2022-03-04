@@ -14,6 +14,7 @@ clients = []
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 server.listen()
+print("Server is listening")
 
 # Sending Messages To All Connected Clients
 def broadcast(message):
@@ -40,6 +41,7 @@ def handle(client):
 # Receiving / Listening Function
 def receive():
     while True:
+
         # Accept Connection
         client, address = server.accept()
         print("Connected with {}".format(str(address)))
