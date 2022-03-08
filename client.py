@@ -8,6 +8,23 @@ nickname = input("Choose your nickname: ")
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(('127.0.0.1', 12345))
 
+
+
+def info():
+    print("***Welcome to the chatroom***")
+    print("Press 2 to change rooms ")
+    print("Press 3 to send private message ")
+    print("Press 0 to quit")
+    print("Option ")
+    print("Option ")
+    choice = input("Your choice:   ")
+    if choice == 2:
+           print("Option ") 
+    if choice == 3:
+           print("Option ")
+    if choice == 0:
+        print("Cya later mate")
+
 def receive():
     while True:
         try:
@@ -36,3 +53,5 @@ receive_thread.start()
 
 write_thread = threading.Thread(target=write)
 write_thread.start()
+
+info()
